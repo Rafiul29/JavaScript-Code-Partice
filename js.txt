@@ -1,0 +1,15 @@
+[Take note of these definitions]
+
+★ A function declaration tells the compiler about a function's name, return type, and parameters.
+
+★ As outlined in the Introduction, an expression function provides the effect of a small function without the formality of introducing a body.
+
+★ Arrow functions are a new way to write anonymous function expressions, and are similar to lambda functions in some other programming languages, such as JavaScript. Arrow functions differ from traditional functions in a number of ways, including the way their scope is determined and how their syntax is expressed.
+
+★ In computer programming, a callback or callback function is any reference to executable code that is passed as an argument to another piece of code; that code is expected to call back the callback function as part of its job.
+
+★ A programming language is said to have First-class functions when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+★ In computer programming, an anonymous function is a function definition that is not bound to an identifier. Anonymous functions are often arguments being passed to higher-order functions or used for constructing the result of a higher-order function that needs to return a function.
+
+★ Currying is a function that takes one argument at a time and returns a new function expecting the next argument. It is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).

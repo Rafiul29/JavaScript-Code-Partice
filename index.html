@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Mess Manangement | Sign Up</title>
+    <style>
+        body {
+            background-color: #3A2778;
+        }
+
+        .header-main {
+            margin-top: 2.5rem;
+            margin-left: 5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+
+        }
+
+        .header-logo img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .header-main h1 {
+            margin-left: 1rem;
+            text-transform: capitalize;
+            color: white;
+            letter-spacing: 0.1rem;
+
+
+        }
+
+        .account-content {
+            max-width: 460px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+        }
+
+        .account-content p{
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .narrow{
+            margin-top: 2.5rem;
+        }
+        @media screen and (max-width: 1200px) {
+            .header-main {
+                margin-top: 2.5rem;
+                margin-left: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+            }
+
+            @media screen and (min-width:500px) {
+                .header-main h1 {
+                    font-size: 1.8rem;
+
+                }
+
+                .account-content h1 {
+                    font-size: 1.6rem;
+                }
+
+            }
+
+
+            @media screen and (max-width:400px) {
+
+                .header-main h1 {
+                    display: none;
+                }
+
+                .header-logo img {
+                    margin-left: 100px;
+                    width: 150px;
+                    height: 150px;
+                }
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class='card'>
+        <div class='inner'>
+
+            <div class="account-page">
+                <div class="header-main" role="banner">
+                    <a class="header-logo" href="#">
+                        <img src="./image/meal.logo.png" alt="">
+                    </a>
+                    <h1>Mess Management</h1>
+                </div>
+
+                <div class="account-content" role="main">
+                    <h1 class="h2">
+                        Almost there …
+                    </h1>
+
+                    <p class="h3">
+                        Please check your email (raficse00@gmail.com) <br> to confirm your account.
+                    </p>
+
+                    <hr>
+                    <div class="narrow">
+                        <p>
+                            If <strong>raficse00@gmail.com</strong> is not your email address, please <a
+                                href="https://signup.heroku.com/account"
+                                data-trackable="{ &quot;category&quot;: &quot;Signups&quot;, &quot;action&quot;: &quot;Clicked back&quot;, &quot;label&quot;: &quot;Check your email screen&quot; }">go
+                                back</a> and enter the correct one.
+                        </p>
+
+                        <p>
+                            If you haven't received our email in 15 minutes, please check your spam folder.
+                        </p>
+
+                        <div>
+                            Still can't find it? Try searching Gmail for <q>in:all subject:(Confirm your account on Mess
+                                management)</q>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
