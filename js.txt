@@ -13,3 +13,17 @@
 ★ In computer programming, an anonymous function is a function definition that is not bound to an identifier. Anonymous functions are often arguments being passed to higher-order functions or used for constructing the result of a higher-order function that needs to return a function.
 
 ★ Currying is a function that takes one argument at a time and returns a new function expecting the next argument. It is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+
+
+
+
+
+// javascript is high level object oriented interpreted multi paradigm programming language
+
+// javascript is high level , prototype based, object oriented, multi-paradigm, interpreted or just-in-time(JIT) compiled, dynamic, single threaded, garbage collected, programming language with first class functions and non blocking event loop concurrency model.
+
+// high level:
+// garbage-colleced:
+// interpreted or just-in-time (JIT):
+// multi-paradigm: 1. procedural 2. oop 3. fp
+// prototype-based obje

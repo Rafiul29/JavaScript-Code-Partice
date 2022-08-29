@@ -257,23 +257,58 @@
 // console.log(miniMaxSum([1,2,3,4,5]))
 
 
-function staircase(n) {
-  // Write your code here
-  let string = "";
-for (let i = 1; i <= n; i++) {
-// printing spaces
-for (let j = 0; j < n - i; j++) {
-  string += " ";
-}
-// printing star
-for (let k = 0; k < i; k++) {
+// function staircase(n) {
+//   // Write your code here
+//   let string = "";
+// for (let i = 1; i <= n; i++) {
+// // printing spaces
+// for (let j = 0; j < n - i; j++) {
+//   string += " ";
+// }
+// // printing star
+// for (let k = 0; k < i; k++) {
  
-  string += "#";
-}
-string += "\n\n";
-}
-return string;
+//   string += "#";
+// }
+// string += "\n\n";
+// }
+// return string;
+
+// }
+
+// console.log(staircase(6));
+
+
+
+function gradingStudents(grades) {
+  // Write your code here
+  
+ let newArr=[]
+  for(let i=0; i<grades.length; i++){
+    if(grades[i]>=38 && grades[i]%5 >=3){
+      while(grades[i]%5 !==0){
+        grades[i]++;
+      }
+    }
+   
+    newArr.push(grades[i])
+  }
+
+
+// let newArr = []
+// for (let i = 0; i < grades.length; i++) {
+//   if (grades[i] < 38) {
+//     newArr.push(grades[i])
+//   } else {
+//     let roundNum = Math.ceil(grades[i] / 5) * 5
+//     if (roundNum - grades[i] < 3) {
+//       newArr.push(roundNum)
+//     } else {
+//       newArr.push(grades[i])
+//     }
+//   }
+// }
+return newArr
 
 }
-
-console.log(staircase(6));
+console.log(gradingStudents([75,37,33]))
