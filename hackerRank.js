@@ -280,19 +280,19 @@
 
 
 
-function gradingStudents(grades) {
-  // Write your code here
+// function gradingStudents(grades) {
+//   // Write your code here
   
- let newArr=[]
-  for(let i=0; i<grades.length; i++){
-    if(grades[i]>=38 && grades[i]%5 >=3){
-      while(grades[i]%5 !==0){
-        grades[i]++;
-      }
-    }
+//  let newArr=[]
+//   for(let i=0; i<grades.length; i++){
+//     if(grades[i]>=38 && grades[i]%5 >=3){
+//       while(grades[i]%5 !==0){
+//         grades[i]++;
+//       }
+//     }
    
-    newArr.push(grades[i])
-  }
+//     newArr.push(grades[i])
+//   }
 
 
 // let newArr = []
@@ -308,7 +308,30 @@ function gradingStudents(grades) {
 //     }
 //   }
 // }
-return newArr
+// return newArr
+
+// }
+// console.log(gradingStudents([75,37,33]))
+
+
+function getMoneySpent(keyboards, drives, b) {
+  let newArry=[];
+  for(let i=0; i<keyboards.length; i++){
+      let sum = 0;
+      for(let j=0; j<drives.length;j++){
+          sum=keyboards[i]+drives[j];
+          
+          if(sum<b){
+              newArry.push(sum)
+          }
+           sum =0;
+      }
+     
+  }
+  let maxcost =newArry.sort(function(a,b){ return a-b})
+
+  return maxcost.length !==0? Math.max(...maxcost): -1
 
 }
-console.log(gradingStudents([75,37,33]))
+
+console.log(getMoneySpent([40,50,60],[5,8,12],60))
