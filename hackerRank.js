@@ -314,24 +314,160 @@
 // console.log(gradingStudents([75,37,33]))
 
 
-function getMoneySpent(keyboards, drives, b) {
-  let newArry=[];
-  for(let i=0; i<keyboards.length; i++){
-      let sum = 0;
-      for(let j=0; j<drives.length;j++){
-          sum=keyboards[i]+drives[j];
+// function getMoneySpent(keyboards, drives, b) {
+//   let newArry=[];
+//   for(let i=0; i<keyboards.length; i++){
+//       let sum = 0;
+//       for(let j=0; j<drives.length;j++){
+//           sum=keyboards[i]+drives[j];
           
-          if(sum<b){
-              newArry.push(sum)
-          }
-           sum =0;
-      }
+//           if(sum<b){
+//               newArry.push(sum)
+//           }
+//            sum =0;
+//       }
      
+//   }
+//   let maxcost =newArry.sort(function(a,b){ return a-b})
+
+//   return maxcost.length !==0? Math.max(...maxcost): -1
+
+// }
+
+// console.log(getMoneySpent([40,50,60],[5,8,12],60))
+
+
+
+// function solve(meal_cost, tip_percent, tax_percent) {
+//     // Write your code here
+//     const tip= (meal_cost/100)*tip_percent;
+//     const tax = (tax_percent/100)*meal_cost;
+//     const total_cost = parseFloat(meal_cost + tip + tax).toFixed(0);
+//     return total_cost
+
+// }
+
+// console.log(solve(12,20,8))
+
+
+
+// function staircase(n) {
+//     // Write your code here
+//     for (let i = 1; i <= n; i++) {
+//         let result = ''.padStart(n - i, " ").concat("".padStart(i, "#"))
+//         console.log(result)
+//     }
+// }
+// console.log(staircase(6))
+
+// function timeConversion(s) {
+//     let [hours, minutes,seconds] = s.split(':');
+//   const modifire=  s.slice(s.length-2)
+//   const second = seconds.split('')
+//   const second1= second.splice(0,2)
+//   const second2 =second1.join("").toString()
+
+//   if(hours === '12'){
+//     hours = '00';
+//   }
+//   if(modifire==='PM'){
+//     hours = parseInt(hours)+12
+//   }
+//   return `${hours}:${minutes}:${second2}`
+// }
+
+
+// console.log(timeConversion('07:05:45PM'))
+
+
+
+// function countApplesAndOranges(s, t, a, b, apples, oranges) {
+//   // Write your code here
+//   let newApples =[];
+//   let newOranges= [];
+//   let countApple=0;
+//   let countOrange=0
+//     for(let i=0; i<apples.length; i++){
+//       newApples.push(apples[i]+a)
+//     }
+//     for(let i=0; i<oranges.length; i++){
+//       newOranges.push(oranges[i]+b)
+//     }
+//     for(let i=0; i<newApples.length; i++){
+//       if(s<=newApples[i] && t>=newApples[i])
+//       countApple++
+      
+//     }
+
+//     for(let i=0; i<newOranges.length; i++){
+//       if(s<=newOranges[i] && t>=newOranges[i])
+//       countOrange++
+      
+//     }
+
+//     console.log(countApple);
+//     console.log(countOrange)
+// }
+// console.log(countApplesAndOranges(7,11,5,15,[-2,2,1],[5,-6]))
+
+
+
+// function kangaroo(x1, v1, x2, v2) {
+//   // Write your code here
+// let k1 = x1 + v1; 
+// let k2 = x2 + v2;
+
+// while (!(k1 === k2)) {
+//   k1 += v1;
+//   k2 += v2;
+// }
+
+// if (k1 === k2) {
+//   console.log("YES");
+// } else {
+//   console.log("NO");
+// }
+
+// }
+
+// kangaroo(0,3,4,2)
+
+
+
+function getTotalX(a, b) {
+    
+    let arr = [];
+    let arr2 = [];
+  
+    for (let j = 1; j <= Math.max(...b); j++) {
+    function testA (num) {
+        return (j % num) == 0
+    }
+    
+    a.every(testA);
+      
+    if (a.every(testA) == true) {
+        arr.push(j);
+    }
+    }
+    
+    for (let j = 0; j < arr.length; j++) {
+        function testB (num) {
+            return (num % arr[j] == 0);
+        }
+        
+    b.every(testB); 
+    
+    if (b.every(testB) == true) {
+        arr2.push(arr[j]);
+    }
+    }
+    
+    return(arr2.length);
+  
   }
-  let maxcost =newArry.sort(function(a,b){ return a-b})
-
-  return maxcost.length !==0? Math.max(...maxcost): -1
-
-}
-
-console.log(getMoneySpent([40,50,60],[5,8,12],60))
+  
+  
+  
+  
+  console.log(getTotalX([2,4],[16,32,96]))
