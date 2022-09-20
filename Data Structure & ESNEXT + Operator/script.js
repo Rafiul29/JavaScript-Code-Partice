@@ -61,6 +61,11 @@ res2.name="Pizza House"
 console.log(res2)
 
 
+
+
+
+
+
 // const ingredients=["Tomato","chicken","Lettuce"]
 
 // restaurant.orderBurger(...ingredients)
