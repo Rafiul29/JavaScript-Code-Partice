@@ -1,0 +1,212 @@
+"use strict";
+
+// default parameter...
+
+// const bookings =[];
+
+// const createBooking = function(roomNum,numGuest=1, price=500*numGuest){
+//     const booking={
+//         roomNum,
+//         numGuest,
+//         price
+//     };
+//     bookings.push(booking);
+// }
+
+// createBooking("A2s",2,100);
+// createBooking("A2s1",2,100);
+// createBooking("DAW55");
+// createBooking("BBB",4);
+
+// createBooking("WWWq",undefined,400);
+
+// console.log(bookings);
+
+
+
+//  value vs reference..........
+
+// const flight= "AAJ@#";
+// const rafiul ={
+//     name:"Rafiul Islam",
+//     passPort: 32898932,
+// }
+
+// const check= function(flightName, passenger){
+//         flightName = "L656GH";
+//         passenger.name= "Mr "+ passenger.name
+//     if(passenger.passPort===32898932){
+//         console.log("check in");
+//     } else{
+//         console.log("Wrong Passport");
+//     }
+// }
+
+// check(flight,rafiul)   
+// console.log(rafiul)
+
+// js does not passing by reference only passing value 
+
+// ===========Function accepting callback function.....
+
+// First class function
+// higher order function
+// call back function
+
+
+// function logcutter(logs){
+//     let logPicess=0;
+//     for(const log of logs){
+//         logPicess+=log
+//     }
+//     return logPicess;
+// }
+
+// function logCounter(logs){
+//     return logs.length;
+// }
+
+// function sawmill(logs,fn){
+//     console.log(`Operated by: ${fn.name}`)
+//     return fn(logs);
+// }
+
+// console.log(sawmill([10,8,9,4],logCounter))
+// console.log(sawmill([10,8,9,4],logcutter))
+
+// function returning functions (curring function)
+
+// function greet(greeting){
+//     return function(name){
+//         console.log(`${greeting}, ${name}`)
+//     };
+// }
+// greet("Good night")("Rafiul")
+
+// Lambda expression.....
+
+// function calVat(rate){
+//     return function(price){
+//         return price+ (rate/100)*price
+//     }
+// }
+
+
+// console.log(calVat(15)(100))
+
+//const calVATArrow =(rate)=>(price)=>price+price*rate;
+
+
+
+// ===========call==============
+
+// const bdArilines={
+//     arlines:"Bangladesh airlines",
+//     code:"ASD",
+//     bookings:[],
+//     book:function(flightName,name){
+//         console.log(
+//             `${name} books a seat on ${this.arlines}, flight ${this.code}${flightName}`
+//         )
+//         this.bookings.push({
+//             flight: `${this.code}${flightName}`,
+//             passengerName: `${name}`
+//         })
+//     }
+
+// }
+
+// const itAirlines={
+//     arlines:"itAirlines airlines",
+//     code:"MNBh",
+//     bookings:[],
+// }
+
+// const multiAirlines={
+//     arlines:"multiAirlines airlines",
+//     code:"MULTI",
+//     bookings:[],
+// }
+
+// bdArilines.book.call(itAirlines,453,"Islam")
+// bdArilines.book.call(multiAirlines,678,"Rahman")
+// bdArilines.book(420,"Rafiul")
+// bdArilines.book(444,"asfia")
+// console.log(bdArilines.bookings)
+// console.log(itAirlines.bookings)
+// console.log(multiAirlines.bookings)
+
+// apply...............
+
+// const arr=[453,"gergeg"]
+// bdArilines.book.apply(itAirlines,[453,"Islam"])
+// bdArilines.book.apply(itAirlines,arr)
+// console.log(itAirlines.bookings)
+
+// const bookitAirlines= bdArilines.book.bind(itAirlines)
+//  const bookmultiAirlines= bdArilines.book.bind(multiAirlines)
+
+//  const bd=bdArilines.book.bind(bdArilines)
+// //  bd(323,"hwq")
+//  const bd1=bdArilines.book.bind(bdArilines,2992)
+//  bd1("Rafiul")
+//  bookitAirlines(111,"tshd")
+//  bookmultiAirlines(888,"iksa")
+
+
+// Restaurants
+
+const rest1={
+    name:"Burger Villa",
+    code: "MV",
+    orders:[],
+    foods:["Burger","Pizza","Nodules","Frenh Fries"],
+
+    orderFood:function(
+        foodIndex=0,
+        foodCount=1,
+        name,
+        address,
+        time,
+        price=100*foodCount
+    )
+    {
+        console.log(
+            `${name} ordered ${foodCount} ${this.foods[foodIndex]}(s) from ${address} at ${time}, Price: ${price}`
+        )
+        this.orders.push({
+            name: `${name}`,
+            food: `${this.foods[foodIndex]}`,
+            pieces: `${foodCount}`,
+            price: `${price}`,
+            address: `${address}`,
+            time: `${time}`,
+        })
+    }
+}
+
+const rest2 = {
+    name: "Pasta King",
+    code: "PK",
+    orders: [],
+    foods: [
+      "Burger",
+      "Chilli Chicken Fries",
+      "Pizza",
+      "Pasta",
+      "Noddles",
+      "French Fries",
+    ],
+  };
+
+// const orderRest1 = rest1.orderFood.bind(rest1);
+// orderRest1(1, 10, "Tumpa", "Dhaka", "10:00PM");
+
+// const orderRest2 =rest1.orderFood.bind(rest2)
+// orderRest2(2,29,"Rafiul","Kushtia","12:00AM")
+
+// immediately invoke function expression.....(IIFE)
+
+(function(){
+    console.log("Check In")
+})()
