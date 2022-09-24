@@ -448,4 +448,53 @@ const restaurant={
 
 // string 
 
+// const name= "Rafiul Islam";
+// console.log(name.toUpperCase())
+// console.log(name.toLowerCase())
 
+
+
+// function fixCap(name){
+//     const lowerCase = name.toLowerCase();
+//     const correctName = lowerCase.at(0).toUpperCase()+lowerCase.slice(1)
+//     return correctName;
+// }
+// console.log(fixCap("rafiul"))
+// console.log(fixCap("rakibul islam"))
+// console.log(fixCap("sHamim"))
+
+
+// function normalizationEmail(email){
+// const normalizationEmail= email.toLowerCase().trim();
+// return normalizationEmail;
+// }
+
+// console.log(normalizationEmail(" RafiulIslam@gmail.Com"));
+
+
+
+// replace 
+// const jutaPrice = "500TK"
+// const priceUsd = jutaPrice.replace("TK", "$")
+// console.log(priceUsd)
+
+// const warning = "Beware of Trojan.86! Trojan.86"
+// const warningCorrect = warning.replaceAll('.', "v")
+// //Es2022;
+
+// const m = warning.replace(/Trojan/g,'v');
+// console.log(m);
+// console.log(warningCorrect);
+
+
+// Repeat ......
+const message = "Bad weather"
+console.log(message.repeat(10))
+
+
+// split and join...
+
+const name = "Rafiul Islam Rafiu";
+const splitName = name.split(" ")
+const joinName = splitName.join("-")
+console.log(joinName)
