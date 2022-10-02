@@ -172,3 +172,6 @@ function binarySearch(arr, find){
 
 console.log(binarySearch([1,2,3,4,5,5],5))
 console.log(binarySearch([11, 14, 15, 16, 41, 51, 55], 51))
+
+
+console.log(0.2 - 0.3 + 0.1)
