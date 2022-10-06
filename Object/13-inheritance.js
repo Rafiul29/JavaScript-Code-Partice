@@ -82,3 +82,18 @@ var sqr1 = new Square(10)
 var sqr2 = new Square(5);
 
 
+//127. Iterate Object and HasOwnProperty in Javascript 
+console.log(sqr1.hasOwnProperty('width'))
+console.log(sqr1.hasOwnProperty('draw'))
+console.log(sqr1.hasOwnProperty('getwidth'))
+
+console.log(Object.keys(sqr1))
+
+for( var i in sqr1){
+    console.log(i)
+}
+
+
+//128 Don't Overwrite Built in Prototypes in Javascript
+
+console.log(Array.prototype.shuffle=function(){})
