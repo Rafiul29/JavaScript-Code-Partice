@@ -12,6 +12,7 @@
     "parcel": "^2.7.0"
   },
   "dependencies": {
+    "json-server": "^0.17.0",
     "lodash": "^4.17.21"
   }
 }
