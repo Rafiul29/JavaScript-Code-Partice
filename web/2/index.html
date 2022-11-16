@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form Validation in js</title>
+  </head>
+  <body>
+    <form action="" id="form">
+      <!-- first name -->
+      <div>
+        <label for="first-name">First Name :(minimum 6 character)</label>
+        <input
+          class="firstName"
+          type="text"
+          id="first-name"
+          placeholder="Enter  your first name"
+        />
+      </div>
+
+      <!-- last name -->
+      <div>
+        <label for="last-name">last Name :</label>
+        <input
+          class="lastName"
+          type="text"
+          id="last-name"
+          placeholder="Enter  your last name"
+        />
+      </div>
+
+      <!-- Email  -->
+      <div>
+        <label for="email">Email :</label>
+        <input
+          class="email"
+          type="text"
+          id="email"
+          placeholder="Enter  your email"
+        />
+      </div>
+
+      <!--  password-->
+      <div>
+        <label for="password">Password(minimum 6 character)</label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      <!-- Address -->
+      <div>
+        <label for="addres">Addres</label>
+        <textarea name="addres" id="addres" cols="30" rows="5"></textarea>
+      </div>
+
+      <!-- phone number -->
+
+      <div>
+        <label for="tel">Mobile No</label>
+        <input type="tel" name="" id="mobile_number" />
+      </div>
+      
+      <div>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="male" id="male"/>Male
+        <input type="radio" name="gender" value="female" id="female" />Female
+      </div>
+
+      <input type="submit" value="register" />
+      <input type="reset" />
+    </form>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

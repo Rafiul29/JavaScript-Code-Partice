@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Prop up JavaScript Display Date using Onclick</title>
+</head>
+<body>
+
+  <form >
+    <input type="text" id="display" >
+  </form>
+  <button type="submit" onclick="display()">submit</button>
+ 
+  <script>
+
+  function display(){
+  setTimeout(() => {
+    
+    let date= new Date();
+    let day= date.getDay()
+    let month= date.getMonth()
+    let year= date.getFullYear();
+    document.getElementById('display').value= `${day}/${month+1}/${year}`
+  }, 3000);
+
+  setTimeout(() => {
+    
+    let date= new Date();
+    let day= date.getDay()
+    let month= date.getMonth()
+    let year= date.getFullYear();
+    let val=document.getElementById('display').value;
+    val.style.display="none"
+  }, 2000);
+}
+  </script>
+  
+</body>
+</html>

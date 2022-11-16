@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>list 5 countries</title>
+</head>
+<body>
+  
+    <select name="country" id="sbox1" onclick="myFunction()">
+      <option value="">select your option</option>
+      <option value="Dhaka">Bangladesh</option>
+      <option value="Delhi">India</option>
+    </select>
+
+    <div>
+      capital <input type="text" id="box2" >
+    </div>
+
+
+
+    <script>
+      function myFunction(){
+        let a=document.getElementById("sbox1").value;
+        console.log(a)
+        document.getElementById("box2").value=a
+      }
+
+    </script>
+</body>
+</html>

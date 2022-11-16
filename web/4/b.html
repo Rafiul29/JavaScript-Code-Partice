@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Factorials number using promt</title>
+</head>
+<body>
+
+<script>
+  let num= prompt("enter the Number ")
+  
+  function Factorials(num){
+    let fact=1;
+    
+    if(num<1){
+      alert(`factorials number is ${num}`)
+    }
+    else{
+      for(let i=1; i<=num; i++){
+        fact=fact*i
+      }
+      alert(`factorials number is ${fact}`)
+    }
+  }
+  Factorials(num)
+</script>
+
+  
+</body>
+</html>
